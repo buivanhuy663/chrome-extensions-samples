@@ -1,5 +1,5 @@
 {
-  "name": "Dictionary side panel",
+  "name": "Dictionary side panel 1.1",
   "version": "0.1",
   "manifest_version": 3,
   "description": "Provides definitions in the side panel.",
@@ -13,5 +13,11 @@
   "side_panel": {
     "default_path": "sidepanel.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
   "permissions": ["sidePanel", "contextMenus", "storage"]
 }
